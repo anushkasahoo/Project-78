@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Project-78</title>
+    </head>
+    <center>
+        <h1>Family Book</h1>
+        <img src = "mother.jpg" height="400" width="300" id="family_image">
+        <h2 id="name">Sangeeta Sahoo</h2>
+        <button onclick="update();">Next</button>
+    </center>
+    <script>
+        var images =
+        ["dad.jpg" , "grandmother.jpg" , "mother.jpg"];
+
+        var names = ["Jyoti Prakash Sahoo" , "Premalata Sahoo" , "Sangeeta Sahoo"];
+         
+        var i = 0;
+        function update()
+        {
+            i++;
+            var number_of_family_member_in_array = 5
+            if(i > number_of_family_member_in_array )
+        {
+            i = 0
+        }
+        var updatedImage = images[i];
+        var updatedName = names[i];
+        document.getElementById("family_image").src = updatedImage;
+        document.getElementById("name").innerHTML = updatedName;
+        }
+    </script>
+</html>
